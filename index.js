@@ -3,6 +3,7 @@
 var $ = require('jquery'),
     _ = require('underscore'),
     i18next = require('i18next'),
+    i18nextJquery = require('jquery-i18next'),
     xhr = require('i18next-xhr-backend');
 
 // Initialize Internationalization
@@ -15,7 +16,8 @@ var options = {
         }
     },
     callback = function() {
-        $('#container').after(i18next.t('welcomeMessage'));
+        i18nextJquery.init(i18next, $);
+        $('.i18n').localize();
     };
 
 i18next
