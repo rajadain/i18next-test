@@ -1,0 +1,21 @@
+{
+  "name": "i18next-test",
+  "version": "1.0.0",
+  "description": "Test app to understand Internationalization",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "browserify index.js -o bundle.js"
+  },
+  "author": "rajadain",
+  "license": "ISC",
+  "dependencies": {
+    "i18next": "^2.2.0",
+    "i18next-xhr-backend": "^0.3.0",
+    "jquery": "^2.2.1",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "browserify": "^13.0.0"
+  }
+}
