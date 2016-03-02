@@ -6,10 +6,12 @@ var $ = require('jquery'),
     i18nextJquery = require('jquery-i18next'),
     xhr = require('i18next-xhr-backend');
 
+var LOCALE = 'en-US';
+
 // Initialize Internationalization
 var options = {
         debug: true,
-        lng: 'en-US',
+        lng: LOCALE,
         fallbackLng: 'en',
         backend: {
             loadPath: 'locales/{{lng}}/translation.json'
