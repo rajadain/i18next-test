@@ -16,6 +16,7 @@ var options = {
         nsSeparator: false,
         keySeparator: false,
         fallbackLng: 'en',
+        overloadTranslationOptionHandler: sprintf.overloadTranslationOptionHandler,
         backend: {
             loadPath: 'locales/{{lng}}/translation.json'
         }
@@ -25,10 +26,7 @@ var options = {
         $('.i18n').localize();
 
         $('#sprintf').text(i18next.t(
-            '%d times %d is %d', {
-                postProcess: 'sprintf',
-                sprintf: [10, 5, 50]
-            }
+            '%d times %d is %d', 10, 5, 50
         ));
     };
 
