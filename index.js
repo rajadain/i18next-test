@@ -4,7 +4,8 @@ var $ = require('jquery'),
     _ = require('underscore'),
     i18next = require('i18next'),
     i18nextJquery = require('jquery-i18next'),
-    xhr = require('i18next-xhr-backend');
+    xhr = require('i18next-xhr-backend'),
+    sprintf = require('i18next-sprintf-postprocessor');
 
 var LOCALE = 'en-US';
 
@@ -24,4 +25,5 @@ var options = {
 
 i18next
     .use(xhr)
+    .use(sprintf)
     .init(options, callback);
