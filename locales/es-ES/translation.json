@@ -1,3 +1,4 @@
 {
-    "welcomeMessage": "Hola Mundo!"
+    "welcomeMessage": "Hola Mundo!",
+    "%d times %d is %d": "%d por %d es %d"
 }

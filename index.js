@@ -7,12 +7,14 @@ var $ = require('jquery'),
     xhr = require('i18next-xhr-backend'),
     sprintf = require('i18next-sprintf-postprocessor');
 
-var LOCALE = 'en-US';
+var LOCALE = 'fr-FR';
 
 // Initialize Internationalization
 var options = {
         debug: true,
         lng: LOCALE,
+        nsSeparator: false,
+        keySeparator: false,
         fallbackLng: 'en',
         backend: {
             loadPath: 'locales/{{lng}}/translation.json'
@@ -21,6 +23,13 @@ var options = {
     callback = function() {
         i18nextJquery.init(i18next, $);
         $('.i18n').localize();
+
+        $('#sprintf').text(i18next.t(
+            '%d times %d is %d', {
+                postProcess: 'sprintf',
+                sprintf: [10, 5, 50]
+            }
+        ));
     };
 
 i18next
